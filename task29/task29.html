@@ -1,42 +1,58 @@
 <!DOCTYPE>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 29</title>
-    <script src="task29.js" defer></script>
-  </head>
-  <style>
-	.btn{
-		background-color:#3498db;
-		height:30px;
-		border-radius:4px;
-		border:none;
-		padding-top:8px 20px 10px 20px;
-		font-family:Arial;
-		color:white;
-		margin-left: 6px;
-	}
-	.inpt{
-		border-radius:4px;
-		border: 1px solid grey;
-		box-shadow:none;
-		width:220px;
-		height:30px;
-	}
-  </style>
-  <script type="text/javascript">
-	function validate_form(thisForm){
-		if (thisForm.inpt.value) {
-			alert(thisForm.inpt.value);
-		}
-	}
-  </script>
+</head>
+<style>
+    .btn{
+        background-color:#3498db;
+        height:30px;
+        border-radius:4px;
+        border:none;
+        padding-top:8px 20px 10px 20px;
+        font-family:Arial;
+        color:white;
+        margin-left: 6px;
+    }
+    .inpt{
+        border-radius:4px;
+        border: 1px solid grey;
+        box-shadow:none;
+        width:220px;
+        height:30px;
+    }
+    .invalid{
+        border-color: red;
+    }
+</style>
+<script type="text/javascript">
+    function validate_form(){
+        var count=0;
+        var inpt=document.getElementsByClassName("inpt")[0];
+        var value=inpt.value;
+        if(inpt.className.indexOf("invalid")>-1){
+            inpt.className="inpt";
+        }
+        if (value) {
+            //技术点：判断字符是否在1-127中，在是英文，不在是中文字符
+            for(var i=0;i<value.length;i++){
+                if(value.charCodeAt(i)<128){
+                    count++;
+                }else{
+                    count+=2;
+                }
+            }
+        }
+        if(count>8 || count<2){
+            inpt.className += " invalid";
+        }
+    }
+</script>
 <body>
 <div>
-	<form onsubmit="return validate_form(this)">
-		<input type="text" class="inpt" name="inpt">
-		<button class="btn" type="submit">Validate</button>
-	</form>
+        <input type="text" class="inpt" name="inpt" placeholder="please enter 2-8 characters.">
+        <button class="btn" type="submit" onclick="validate_form()">Validate</button>
 </div>
 </body>
 </html>
