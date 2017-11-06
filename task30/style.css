@@ -1,0 +1,19 @@
+/* body {
+	font-size: 25px;
+	font-family: 'Microsoft yahei';
+	} */
+.form-group{
+	
+}
+input {
+	height: 33px;
+    width: 350px;
+	border-radius:4px;
+	border: 1px solid grey;
+	box-shadow:none;
+}
+p {
+	font-size:12px;
+	color: grey;	
+	margin-top: 5px;
+}
