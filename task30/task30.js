@@ -28,7 +28,7 @@ var validations={
 		ele.nextElementSibling.className="perror";
 		ele.nextElementSibling.innerHTML=comment;
 	},
-	rightValidate: function(){
+	rightValidate: function(ele,comment){
 		ele.className="iright";
 		ele.nextElementSibling.className="pright";
 		ele.nextElementSibling.innerHTML=comment;
