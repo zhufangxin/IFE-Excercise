@@ -1,9 +1,8 @@
-/* body {
-	font-size: 25px;
-	font-family: 'Microsoft yahei';
-	} */
-.form-group{
+body {
 	
+	} 
+.form-group{
+	margin: 0 auto;
 }
 input {
 	height: 33px;
@@ -11,9 +10,32 @@ input {
 	border-radius:4px;
 	border: 1px solid grey;
 	box-shadow:none;
+	margin-left: 6px;
+}
+input:focus { 
+    border: 1px solid #42adf4;
 }
 p {
 	font-size:12px;
 	color: grey;	
 	margin-top: 5px;
+	margin-left: 45px;
+}
+.status{
+	display:none;
+}
+.show{
+	display:block;
+}
+.perror{
+	color: red;
+}
+.ierror{
+	border: 1px solid red;
+}
+.iright{
+	border: 1px solid green;
+}
+.pright{
+	color: green;
 }
