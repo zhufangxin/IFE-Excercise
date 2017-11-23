@@ -2,17 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>IFE JavaScript Task 18</title>
+    <title>IFE JavaScript Task 30</title>
     <script src="task30.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 <body>
-<form>
+<form action="">
 	<div class="form-group">
 		<label>名称</label>
 		<input type="text" id="username"></input>
 		<p class="status" id="status">必填，长度为4~16个字符</p>
 	</div>
+	<div class="form-group">
+		<label>密码</label>
+		<input type="password" id="password"></input>
+		<p class="status" id="status">请输入密码</p>
+	</div>
+	<div class="form-group">
+		<label>确认密码</label>
+		<input type="password" id="repassword"></input>
+		<p class="status" id="status">请再次输入密码</p>
+	</div>
+	<div class="form-group">
+		<label>邮箱</label>
+		<input type="email" id="email"></input>
+		<p class="status" id="status">请输入邮箱</p>
+	</div>
+	<button id="submit">提交</button>
 </form>
 </body>
 </html>
