@@ -3,20 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 31</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="task31.js" defer></script>
-	
   </head>
 <body>
 <form>
 	<div>
-		<input type="radio" id="undergraduate" name="stutype" checked="true">
+		<input type="radio" id="undergraduate" name="stutype">
 		<label for="undergraduate">Undergraduate</label>
 		
 		<input type="radio" id="graduate" name="stutype">
 		<label for="graduate">Graduate</label>
 	</div>
+	<div class="selectGroup">
+		City:<select>
+			<option>Beijing</option>
+			<option>Shanghai</option>
+			<option>Dalian</option>
+		</select>
+		School:<select>
+			<option></option>
+			<option></option>
+			<option></option>
+		</select>
+	</div>
 	<div>
-		<select></select>
+		<input type="text" name="inputText"/>
 	</div>
 </form>
 </body>
