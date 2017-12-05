@@ -4,9 +4,10 @@
 //城市及学校的数据随意编造即可，无需真实完整
 window.onload = function(){
 	var radios= document.getElementsByName("stutype");
-	//var select= document.getElementsByTagName("select")[0];
 	var selectGroup=document.getElementsByClassName("selectGroup")[0];
 	var inputText= document.getElementsByName("inputText")[0];
+	var city= document.getElementById("city");
+	var school= document.getElementById("school");
 	inputText.className = "hide";
 	selectGroup.className="hide";
 
@@ -18,4 +19,14 @@ window.onload = function(){
 		selectGroup.className="hide";
 		inputText.className="show";
 	} 
+	var schoolArr=[["Bejing University","Qinghua Univeristy","Tongji University"],["Shanghai University","Fudan University"],["Dalian University","DUT","DUFL"]];
+	
+	city.onclick = function(){
+		var str="";
+		var arr=schoolArr[this.selectedIndex];
+		for(var i=0;i<arr.length;i++){
+			 str+= "<option>"+arr[i]+"</option>";
+		}
+		school.innerHTML=str;
+	}
 }
