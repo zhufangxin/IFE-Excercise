@@ -36,4 +36,15 @@ window.onload = function(){
 		tbody.appendChild(tr);		
 	}
 	
+	var theads = document.getElementsByTagName("th");
+	console.log(totaltr);
+	//var linenumber = totaltr.length-1;
+	for(var i=0;i<theads.length;i++){
+		theads[i].onclick = function(){
+			for(var j=0;j<tcolumn.length;j++){
+				console.log(tcolumn);
+			}
+		}
+	}
+	
 }
