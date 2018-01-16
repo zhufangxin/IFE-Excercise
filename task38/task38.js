@@ -28,7 +28,6 @@ window.onload = function(){
 	for(var i=0;i<data.tbody.length;i++){
 		var tr=document.createElement("tr");
 		for(var j=0;j<data.tbody[i].length;j++){
-			//tds+="<td>"+data.tbody[i][j]+"</td>";	
 			var td=document.createElement("td");
 			td.innerHTML= data.tbody[i][j];
 			tr.appendChild(td);
@@ -36,14 +35,16 @@ window.onload = function(){
 		tbody.appendChild(tr);		
 	}
 	
-	var theads = document.getElementsByTagName("th");
-	console.log(totaltr);
-	//var linenumber = totaltr.length-1;
-	for(var i=0;i<theads.length;i++){
+	var theads = document.getElementsByTagName("th");	
+	for(var i=0;i<theads.length;i++){			
+		var ascbtn = document.createElement("button");		
+		ascbtn.className = "asc";	
+		theads[i].appendChild(ascbtn);
+		var descbtn = document.createElement("button");		
+		descbtn.className = "desc";	
+		theads[i].appendChild(descbtn);
 		theads[i].onclick = function(){
-			for(var j=0;j<tcolumn.length;j++){
-				console.log(tcolumn);
-			}
+			console.log(this);
 		}
 	}
 	
