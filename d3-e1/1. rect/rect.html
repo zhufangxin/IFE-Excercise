@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Barchart Demo</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <svg width="400" height="500" style="border: 1px solid">
+    </svg>
+    <script>
+      var data = [10, 15, 25, 120, 500, 980, 1200];
+      
+      // Create yScale
+      var yscale = d3.scaleLinear()
+      .domain([10,1200])
+      .range([5,600]);
+
+      d3.select("svg")
+      .selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+        .attr("width",35)
+        .attr("height",function(d){return yscale(d)})
+        .attr("x",function(d,i){return i*50})
+        .attr("y",function(d){return 500-yscale(d)})
+        .style("fill","blue")
+        .style("stroke","pink")
+        .style("stroke-width","1px")
+        .style("opacity","0.5")
+    </script>
+</body>
+
+</html>
